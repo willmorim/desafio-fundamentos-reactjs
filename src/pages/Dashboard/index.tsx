@@ -33,17 +33,6 @@ const Dashboard: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [balance, setBalance] = useState<Balance>({} as Balance);
 
-  // useEffect(() => {
-  //   async function loadTransactions(): Promise<void> {
-  //     const response = await api.get('/transactions');
-  //     const { transactions, balance } = response.data;
-  //     setTransactions(transactions);
-  //     setBalance(balance);
-  //   }
-
-  //   loadTransactions();
-  // }, []);
-
   useEffect(() => {
     async function loadTransactions(): Promise<void> {
       const response = await api.get('/transactions');
